@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Something Special For You</title>
+<style>
+  body {
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #d7bfae, #c8a68d);
+    color: #4b2e00;
+    padding: 50px;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #6b4f35;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: #5a3e1b;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 20px;
+    background: #a67c52;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #8b623d;
+  }
+
+  /* Falling red hearts */
+  .heart {
+    position: fixed;
+    top: -20px;
+    font-size: 20px;
+    color: red;
+    animation: fall 5s linear;
+    user-select: none;
+    pointer-events: none;
+  }
+  @keyframes fall {
+    to {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body onload="heartRain()">
+
+<h1>Mere Dil ki baat💕✨</h1>
+
+<p>
+  Shreya 💖,     
+Our friendship is one of the most beautiful gifts life has given me. From endless laughter to quiet moments where words weren’t needed, you’ve always been there—my confidante, my cheerleader, and the person who truly understands my heart.<br> 
+
+Every memory we’ve made together is etched into my soul—our silly jokes, adventures, and even the moments we’ve leaned on each other through hard times. You’ve made my world brighter just by being in it, and your presence fills every corner of my life with love and warmth.
+<br> 
+Tum kehti ho na, “kuch bolo toh ye hai mere dil ki baat ki tum mere liye bhagwaan ka sabse khubsurat tohfa ho. Mai shayad kabhi keh na paau, mein ye nhi jaanti ki mein acchi dost hu ya nhi lekin tumhare liye mein hamesha rahungi chaahe tum mere paas raho ya na raho mein hamesha tumhe apni duniya ka ek aisa hissa bna ke rakhungi jisme kisi ke liye koi jagah nhi hogi siwaay tumahre , Mai shayad kabhi keh na paau but you are truly precious to me.”
+<br>
+On your birthday, I want you to know how deeply grateful I am for you—for your kindness, your laughter, your unwavering support, and the way you make even ordinary days extraordinary. You are not just my best friend; you are family, and my heart is forever yours to cherish. 💕✨
+<br>
+Happy Birthday, Shreya. Here’s to us, our memories, and the countless adventures yet to come. 🥹🎂
+</p>
+
+<a href="surprise.html"><button>Back to Main Page</button></a>
+
+<script>
+  // Heart rain (falling red hearts)
+  function heartRain() {
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = 15 + Math.random() * 25 + 'px';
+      heart.style.animationDuration = 3 + Math.random() * 3 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 200);
+  }
+</script>
+
+</body>
+</html>
